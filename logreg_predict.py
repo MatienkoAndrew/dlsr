@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    logreg_predict.py                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/17 16:36:09 by fgeruss           #+#    #+#              #
+#    Updated: 2020/11/17 16:36:13 by fgeruss          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 from dslr.model import LogisticRegression
 from dslr.scaler import StandardScaler
 import argparse

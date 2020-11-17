@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    stochastic_model.py                                :+:      :+:    :+:    #
+#    minibatch_logreg.py                                :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/11/17 16:37:29 by fgeruss           #+#    #+#              #
-#    Updated: 2020/11/17 16:37:30 by fgeruss          ###   ########.fr        #
+#    Created: 2020/11/17 16:37:46 by fgeruss           #+#    #+#              #
+#    Updated: 2020/11/17 16:37:48 by fgeruss          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import numpy as np
 
-class StochasticLogisticRegression:
+class MiniBatchLogisticRegression:
 	def __init__(self, eta=0.1, max_iter=100, l2=0, initial_weights=None, multi_class=None):
 		self.eta = eta
 		self.max_iter = max_iter
@@ -42,11 +42,11 @@ class StochasticLogisticRegression:
 			yVec[i, self._K.index(y[i])] = 1
 
 		for i in range(self.max_iter + 1):
-			random = np.random.randint(low=len(X), size=1)[0]
+			random = np.random.randint(low=len(X), size=3)
 			y_pred = self.sigmoid(np.dot(self._w, X_bias[random].T))
 			loss_function = (-1.0 / m) * (np.sum((yVec[random].T * np.log(y_pred) + (1 - yVec[random].T) * np.log(1 - y_pred))))
 
-			gradients = -(1 / m) * np.dot((yVec[random] - y_pred.T).reshape(-1, 1), X_bias[random].reshape(1, -1))
+			gradients = -(1 / m) * np.dot((yVec[random] - y_pred.T).T, X_bias[random])
 			step_size = self.eta * gradients
 			self._w = self._w - step_size
 			if i % 10 == 0:

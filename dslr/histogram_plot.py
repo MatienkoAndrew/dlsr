@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    histogram_plot.py                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/17 16:37:38 by fgeruss           #+#    #+#              #
+#    Updated: 2020/11/17 16:37:40 by fgeruss          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 from matplotlib import pyplot as plt
 import numpy as np
 
@@ -24,8 +36,8 @@ def histogram_plot(train):
 		plt.subplot(1, 4, i + 1)
 		plt.hist(train[train['Hogwarts House'] == faculty]['Care of Magical Creatures'])
 		plt.title(faculty)
-		plt.xlabel('Number of students')
-		plt.ylabel('Marks')
+		plt.ylabel('Number of students')
+		plt.xlabel('Marks')
 	#plt.show()
 
 	plt.figure(3, figsize=(10, 6))

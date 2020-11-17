@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    logreg_train.py                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/17 16:36:47 by fgeruss           #+#    #+#              #
+#    Updated: 2020/11/17 16:36:49 by fgeruss          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 import pandas as pd
 from matplotlib import pyplot as plt
 from sklearn.metrics import accuracy_score
