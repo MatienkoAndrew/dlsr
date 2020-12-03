@@ -46,6 +46,6 @@ def histogram_plot(train):
 		plt.hist(train[train['Hogwarts House'] == faculty]['Care of Magical Creatures'], alpha=0.7)
 		plt.title('Care of Magical Creatures')
 		plt.legend(faculties)
-		plt.xlabel('Number of students')
-		plt.ylabel('Marks')
+		plt.xlabel('Marks')
+		plt.ylabel('Number of students')
 	plt.show()

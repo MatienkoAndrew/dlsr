@@ -1,4 +1,4 @@
-python3 venv env && source env/vin/activate
+python3 venv env && source env/bin/activate
 
 > pip3 install pandas numpy matplotlib
 
@@ -64,18 +64,18 @@ to generate a prediction file houses.csv formatted exactly as follows:
 
 3. Graphic of loss function of LR model
 
-> python3 logreg_train.py datasets/dataset_test.csv -l
+> python3 logreg_train.py datasets/dataset_train.csv -l
 
 4. Graphic of loss function to compare models
 
-> python3 logreg_train.py datasets/dataset_test.csv -s
+> python3 logreg_train.py datasets/dataset_train.csv -s
 
 5. Accuracy score of models
 
-> python3 logreg_train.py datasets/dataset_test.csv -k
+> python3 logreg_train.py datasets/dataset_train.csv -k
 
 
 6. Weights of models
 
-> python3 logreg_train.py datasets/dataset_test.csv -w
+> python3 logreg_train.py datasets/dataset_train.csv -w
 
